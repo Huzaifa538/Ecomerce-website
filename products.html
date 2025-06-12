@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Shopixo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Shopixo</span>
+                    </a>
+                </div>
+                <div class="search-container">
+                    <div class="search-bar">
+                        <select class="category-select" id="categorySelect">
+                            <option value="">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="home">Home & Garden</option>
+                            <option value="books">Books & Media</option>
+                        </select>
+                        <input type="text" placeholder="Search products..." id="searchInput">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="auth-links">
+                        <div class="user-menu" id="userMenu">
+                            <span class="user-greeting">Hello, Sign in</span>
+                            <div class="dropdown-content">
+                                <a href="login.html">Sign In</a>
+                                <a href="signup.html">Create Account</a>
+                                <a href="#" id="logoutBtn" style="display: none;">Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-icon">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html?category=electronics">Electronics</a></li>
+                <li><a href="products.html?category=fashion">Fashion</a></li>
+                <li><a href="products.html?category=home">Home & Garden</a></li>
+                <li><a href="products.html?category=books">Books & Media</a></li>
+                <li><a href="products.html" class="active">All Products</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="index.html">Home</a>
+                <span>&gt;</span>
+                <span id="breadcrumbCategory">Products</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="products-page">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <div class="filter-section">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="" checked>
+                                <span>All Categories</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="electronics">
+                                <span>Electronics</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="fashion">
+                                <span>Fashion</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="home">
+                                <span>Home & Garden</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="books">
+                                <span>Books & Media</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Price Range</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="" checked>
+                                <span>All Prices</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="0-25">
+                                <span>Under $25</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="25-50">
+                                <span>$25 - $50</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="50-100">
+                                <span>$50 - $100</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="100+">
+                                <span>Over $100</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Rating</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="" checked>
+                                <span>All Ratings</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="4+">
+                                <span>4+ Stars</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="3+">
+                                <span>3+ Stars</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="clear-filters" id="clearFilters">Clear All Filters</button>
+                </aside>
+
+                <!-- Products Content -->
+                <div class="products-content">
+                    <!-- Sort and Results Info -->
+                    <div class="products-header">
+                        <div class="results-info">
+                            <span id="resultsCount">0 results</span>
+                        </div>
+                        <div class="sort-options">
+                            <label for="sortBy">Sort by:</label>
+                            <select id="sortBy">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Customer Rating</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded dynamically -->
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div class="no-results" id="noResults" style="display: none;">
+                        <i class="fas fa-search"></i>
+                        <h3>No products found</h3>
+                        <p>Try adjusting your search or filter criteria</p>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="load-more-container">
+                        <button class="load-more-btn" id="loadMoreBtn" style="display: none;">
+                            Load More Products
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Shopixo</h3>
+                    <p>Your trusted online shopping destination with quality products and excellent service.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shopixo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
