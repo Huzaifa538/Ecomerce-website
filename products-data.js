@@ -109,9 +109,9 @@ const PRODUCTS_DB = [
         discount: 28,
         rating: 4.5,
         reviewCount: 743,
-        image: "images/security-camera.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEtgg3Pkj2JzZLF6yGx4BvqH-eUylZyL3HhA&s",
         images: [
-            "images/security-camera.jpg"
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEtgg3Pkj2JzZLF6yGx4BvqH-eUylZyL3HhA&s"
         ],
         description: "WiFi-enabled security camera with 1080p HD recording, night vision, and smartphone app control.",
         features: [
@@ -201,7 +201,7 @@ const PRODUCTS_DB = [
         badge: "Fitness"
     },
 
-    // Fashion 
+//    fastion
     {
         id: 9,
         name: "Designer Leather Handbag",
@@ -261,9 +261,9 @@ const PRODUCTS_DB = [
         discount: 29,
         rating: 4.8,
         reviewCount: 234,
-        image: "images/evening-dress.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ-yC1qLGzoDur8rGOZ8r2LyOneHGIIoXJ0A&s",
         images: [
-            "images/evening-dress.jpg"
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ-yC1qLGzoDur8rGOZ8r2LyOneHGIIoXJ0A&s"
         ],
         description: "Sophisticated evening dress perfect for special occasions with flowing silhouette and premium fabric.",
         features: [
@@ -353,7 +353,7 @@ const PRODUCTS_DB = [
         badge: "Luxury"
     },
 
-    // Home Appliances
+   
     {
         id: 15,
         name: "Smart Coffee Maker",
@@ -413,9 +413,9 @@ const PRODUCTS_DB = [
         discount: 28,
         rating: 4.6,
         reviewCount: 1123,
-        image: "images/air-fryer.jpg",
+        image: "https://www.winstore.pk/cdn/shop/products/5q7poY5WRm_2048x.jpg?v=1647868044",
         images: [
-            "images/air-fryer.jpg"
+            "https://www.winstore.pk/cdn/shop/products/5q7poY5WRm_2048x.jpg?v=1647868044"
         ],
         description: "Advanced digital air fryer with multiple cooking presets and healthier cooking with little to no oil.",
         features: [
